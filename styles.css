@@ -5,17 +5,52 @@ Some notes on the design from your UX designer:
 When building the photo gallery portion of the page, use CSS grid. For other parts of the page you can use whatever CSS layout technique(s) you feel are the  best choice.
 
 
-The site uses a sans-serif font
-The page background colour is #cccccc
-header background color: #120323
-company name & image bottom border: #97bf04
 navigation & footer background colour: #d9043d
 Any spacing not defined can be estimated
-Ensure you don't use pixels for anything other than image widths and border sizes. All other units should be relative (rem, em, %, etc.)
-Each photo has a 10px border on the bottom
+!!!Ensure you don't use pixels for anything other than image widths and border sizes. All other units should be relative (rem, em, %, etc.)!!!!!
 Each gallery image should scale according to the size of its container, up to 650px in width, and be centered in its container
-DO NOT USE PIXELS EVER - Use responsive sizing ONLY.
 */
+
+/*GENERAL CSS:*/
+
+body{
+    background-color: #cccccc;
+    font-family: sans-serif;
+}
+
+.header-container{
+    background-color: #120323;
+    color: #97bf04;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container nav ul{
+    list-style: none;
+    background-color: #97bf04;
+}
+.header-container nav ul li{
+    background-color: #d9043d;
+    padding: 1rem 1rem 1rem 1rem;
+
+}
+
+.header-container nav ul li a{
+    color:white;
+    text-decoration: none;
+}
+main figure{
+    border-bottom:#97bf04 solid 10px; 
+
+}
+
+footer {
+    background-color: #d9043d;
+    color: white;
+}
+
+
+
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Devices less than 768px wide

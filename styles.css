@@ -16,6 +16,8 @@ Each gallery image should scale according to the size of its container, up to 65
 body{
     background-color: #cccccc;
     font-family: sans-serif;
+    max-width: 100%;
+    margin: 0 0;
 }
 
 .header-container{
@@ -24,6 +26,10 @@ body{
     display: flex;
     flex-direction: column;
         text-align: center;
+}
+
+.header-container img{
+    padding: 1rem 1rem;
 }
 
 .header-container nav ul{
@@ -46,19 +52,20 @@ body{
 
 main figure {
     background-color: white;
+    padding: 1rem;
     text-align: center;
     max-width: 100%;
+    max-width: 650px;
 }
 
 main figure img{
     border-bottom:#97bf04 solid 10px; 
-    max-width: 650px;
+    max-width: 100%;
     max-height: auto;
 }
 
 main figure figcaption {
     text-align: left;
-    padding: 1rem 2rem;
 }
 
 footer {
@@ -80,22 +87,26 @@ The photo gallery should be one column
 
 @media screen and (max-width:768px) {
 
-
     .header-container nav li{
         max-width: 95%;
         border: solid #97bf04;
+        margin: 0 0;
     }
+
 
     main{
         display:grid;
         grid-template-columns:auto;
-
-
     }
+
     main h2 {
         text-align: center;
     }
 
+    footer{
+        padding: 1rem 1rem;
+        text-align: center;
+    }
 
 }
 
@@ -126,9 +137,7 @@ The last image in the gallery (tiger) should span two columns
         justify-content: center;
     }
 
-    body{
-        background-color: #d1e1ae;  /*DIFFERENTIATE MEDIA QUERIES VISUALLY  */
-    }
+
     main h2{
         text-align: center;
 
@@ -136,6 +145,7 @@ The last image in the gallery (tiger) should span two columns
     #gallery-container{
         display: grid;
         column-count: 2;
+        column-gap: 2rem;
         grid-template-columns: 1fr 1fr;
 
         
@@ -144,7 +154,7 @@ The last image in the gallery (tiger) should span two columns
     #gallery-container figure{
         max-width: 100%;
         margin: 1rem 1rem;
-        padding: 1rem 1rem;
+        padding: 1.5rem 1.5rem;
         
     }
     #gallery-container figure img{
@@ -153,6 +163,12 @@ The last image in the gallery (tiger) should span two columns
 
     #gallery-container figure:last-of-type { /*This was the HARDEST THING TO DO EVER.... TOOK ME FOREVER TO FIND THIS :C*/
         grid-column: span 2;
+    }
+    
+
+    footer{
+        padding: 1rem 1rem;
+        text-align: center;
     }
 
 
@@ -174,9 +190,21 @@ The navigation should be a pink bar that takes up 100%
         display: grid;
     }
 
-    body{
-        background-color: #d1e1ae;  /*DIFFERENTIATE WIDTHS  */
+
+    .header-container nav ul {
+        background-color: #d9043d;
+        padding:1rem;
+        margin: 0 0;
+        justify-content: center;
+        text-align: center;
+        
     }
+    .header-container nav ul li{
+        display:inline;
+        justify-content: center;
+    }
+
+
     main h2{
         text-align: center;
 
@@ -184,8 +212,8 @@ The navigation should be a pink bar that takes up 100%
     #gallery-container{
         display: grid;
         column-count: 3;
+        column-gap: 2rem;
         grid-template-columns: 1fr 1fr 1fr;
-        border: solid #d9043d;
     }
 
     #gallery-container figure{
@@ -199,6 +227,9 @@ The navigation should be a pink bar that takes up 100%
     }
 
 
+    #gallery-container figure:last-of-type { /*This was the HARDEST THING TO DO EVER.... TOOK ME FOREVER TO FIND THIS :C*/
+        grid-column: span 2;
+    }
 
 
 }

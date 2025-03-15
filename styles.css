@@ -23,15 +23,19 @@ body{
     color: #97bf04;
     display: flex;
     flex-direction: column;
+        text-align: center;
 }
 
 .header-container nav ul{
     list-style: none;
-    background-color: #97bf04;
+    padding: 0 0;
+
 }
 .header-container nav ul li{
     background-color: #d9043d;
-    padding: 1rem 1rem 1rem 1rem;
+    margin: 1rem 1rem;
+    padding: 1rem 1rem;
+
 
 }
 
@@ -39,9 +43,22 @@ body{
     color:white;
     text-decoration: none;
 }
-main figure{
-    border-bottom:#97bf04 solid 10px; 
 
+main figure {
+    background-color: white;
+    text-align: center;
+    max-width: 100%;
+}
+
+main figure img{
+    border-bottom:#97bf04 solid 10px; 
+    max-width: 650px;
+    max-height: auto;
+}
+
+main figure figcaption {
+    text-align: left;
+    padding: 1rem 2rem;
 }
 
 footer {
@@ -53,7 +70,9 @@ footer {
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Devices less than 768px wide
+/*   MOBILE MOBILE MOBILE MOBILE 
+
+Devices less than 768px wide
 The buttons in the navigation should be of equal width and height, and take up 95% of the screen width
 The buttons have a border that is colour #97bf04
 The photo gallery should be one column
@@ -61,15 +80,82 @@ The photo gallery should be one column
 
 @media screen and (max-width:768px) {
 
+
+    .header-container nav li{
+        max-width: 95%;
+        border: solid #97bf04;
+    }
+
+    main{
+        display:grid;
+        grid-template-columns:auto;
+
+
+    }
+    main h2 {
+        text-align: center;
+    }
+
+
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TABLET TABLET TABLET TABLET TABLET
+
 For devices less than 1000px wide
 The navigation should be a pink bar that takes up 100% the width of the screen with the links centered inside the nav bar
 The photo gallery should be two columns
 The last image in the gallery (tiger) should span two columns
 */
 @media screen and (min-width:769px) and (max-width:1000px) {
+
+    main{
+        display: grid;
+    }
+
+    .header-container nav ul {
+        background-color: #d9043d;
+        padding:1rem;
+        margin: 0 0;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .header-container nav ul li{
+        display:inline;
+        justify-content: center;
+    }
+
+    body{
+        background-color: #d1e1ae;  /*DIFFERENTIATE MEDIA QUERIES VISUALLY  */
+    }
+    main h2{
+        text-align: center;
+
+    }
+    #gallery-container{
+        display: grid;
+        column-count: 2;
+        grid-template-columns: 1fr 1fr;
+
+        
+    }
+
+    #gallery-container figure{
+        max-width: 100%;
+        margin: 1rem 1rem;
+        padding: 1rem 1rem;
+        
+    }
+    #gallery-container figure img{
+        max-width: 100%;
+    }
+
+    #gallery-container figure:last-of-type { /*This was the HARDEST THING TO DO EVER.... TOOK ME FOREVER TO FIND THIS :C*/
+        grid-column: span 2;
+    }
+
+
 
 }
 
@@ -82,6 +168,38 @@ The navigation should be a pink bar that takes up 100%
 */
 
 @media screen and (min-width:1001px){
+
+
+    main{
+        display: grid;
+    }
+
+    body{
+        background-color: #d1e1ae;  /*DIFFERENTIATE WIDTHS  */
+    }
+    main h2{
+        text-align: center;
+
+    }
+    #gallery-container{
+        display: grid;
+        column-count: 3;
+        grid-template-columns: 1fr 1fr 1fr;
+        border: solid #d9043d;
+    }
+
+    #gallery-container figure{
+        max-width: 100%;
+        margin: 1rem 1rem;
+        padding: 1rem 1rem;
+
+    }
+    #gallery-container figure img{
+        max-width: 100%;
+    }
+
+
+
 
 }
 

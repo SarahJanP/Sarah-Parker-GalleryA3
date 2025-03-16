@@ -29,7 +29,7 @@ body{
 }
 
 .header-container img{
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
 }
 
 .header-container nav ul{
@@ -52,7 +52,7 @@ body{
 
 main figure {
     background-color: white;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
     max-width: 100%;
     max-width: 650px;
@@ -87,6 +87,10 @@ The photo gallery should be one column
 
 @media screen and (max-width:768px) {
 
+
+    .header-container h1{
+        font-size:1.7rem;
+    }
     .header-container nav li{
         max-width: 95%;
         border: solid #97bf04;
@@ -101,11 +105,14 @@ The photo gallery should be one column
 
     main h2 {
         text-align: center;
+        margin-bottom: 0rem;
     }
+
 
     footer{
         padding: 1rem 1rem;
         text-align: center;
+        font-size: small;
     }
 
 }
@@ -122,6 +129,10 @@ The last image in the gallery (tiger) should span two columns
 
     main{
         display: grid;
+    }
+
+    .header-container h1{
+        font-size:1.7rem;
     }
 
     .header-container nav ul {
@@ -153,8 +164,8 @@ The last image in the gallery (tiger) should span two columns
 
     #gallery-container figure{
         max-width: 100%;
-        margin: 1rem 1rem;
-        padding: 1.5rem 1.5rem;
+        margin: 1rem 1.5rem;
+        padding: 1.5rem 2rem;
         
     }
     #gallery-container figure img{
@@ -167,7 +178,7 @@ The last image in the gallery (tiger) should span two columns
     
 
     footer{
-        padding: 1rem 1rem;
+        padding: 2rem 2rem;
         text-align: center;
     }
 
@@ -179,6 +190,7 @@ The last image in the gallery (tiger) should span two columns
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP
 For devices greater than 1000px wide
 The navigation should be a pink bar that takes up 100%
 */
@@ -215,12 +227,12 @@ The navigation should be a pink bar that takes up 100%
         column-gap: 2rem;
         grid-template-columns: 1fr 1fr 1fr;
     }
-
+    
     #gallery-container figure{
         max-width: 100%;
-        margin: 1rem 1rem;
-        padding: 1rem 1rem;
-
+        margin: 1rem 1.5rem;
+        padding: 1.5rem 2rem;
+        
     }
     #gallery-container figure img{
         max-width: 100%;
@@ -231,6 +243,9 @@ The navigation should be a pink bar that takes up 100%
         grid-column: span 2;
     }
 
-
+    footer{
+        padding: 1rem 1rem;
+        text-align: center;
+    }
 }
 

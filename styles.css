@@ -47,7 +47,6 @@ main figure {
 main figure img{
     border-bottom:#97bf04 solid 10px; 
     max-width: 100%;
-    max-height: auto;
 }
 
 main figure figcaption {

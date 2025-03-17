@@ -1,15 +1,4 @@
-/* INSTRUCTIONS----------------------------------------
 
-Some notes on the design from your UX designer:
-----------------------------------------------------
-When building the photo gallery portion of the page, use CSS grid. For other parts of the page you can use whatever CSS layout technique(s) you feel are the  best choice.
-
-
-navigation & footer background colour: #d9043d
-Any spacing not defined can be estimated
-!!!Ensure you don't use pixels for anything other than image widths and border sizes. All other units should be relative (rem, em, %, etc.)!!!!!
-Each gallery image should scale according to the size of its container, up to 650px in width, and be centered in its container
-*/
 
 /*GENERAL CSS:*/
 
@@ -29,20 +18,17 @@ body{
 }
 
 .header-container img{
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
 }
 
 .header-container nav ul{
     list-style: none;
     padding: 0 0;
-
 }
 .header-container nav ul li{
     background-color: #d9043d;
     margin: 1rem 1rem;
     padding: 1rem 1rem;
-
-
 }
 
 .header-container nav ul li a{
@@ -77,19 +63,10 @@ footer {
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*   MOBILE MOBILE MOBILE MOBILE 
-
-Devices less than 768px wide
-The buttons in the navigation should be of equal width and height, and take up 95% of the screen width
-The buttons have a border that is colour #97bf04
-The photo gallery should be one column
-*/
+/*   MOBILE MOBILE MOBILE MOBILE */
 
 @media screen and (max-width:768px) {
 
-    .header-container img {
-        padding: 1rem 1rem;
-    }
 
     .header-container h1{
         font-size:2rem;
@@ -123,17 +100,14 @@ The photo gallery should be one column
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TABLET TABLET TABLET TABLET TABLET
+TABLET TABLET TABLET TABLET TABLET*/
 
-For devices less than 1000px wide
-The navigation should be a pink bar that takes up 100% the width of the screen with the links centered inside the nav bar
-The photo gallery should be two columns
-The last image in the gallery (tiger) should span two columns
-*/
 @media screen and (min-width:769px) and (max-width:1000px) {
 
     main{
         display: grid;
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
     }
 
     .header-container h1{
@@ -144,35 +118,32 @@ The last image in the gallery (tiger) should span two columns
         background-color: #d9043d;
         padding:1rem;
         margin: 0 0;
-        justify-content: center;
-        text-align: center;
-        
-    }
-    .header-container nav ul li{
-        display:inline;
-        justify-content: center;
     }
 
+    .header-container nav ul li{
+        display:inline;
+    }
 
     main h2{
         text-align: center;
+        padding-top: 0.5rem;
 
     }
+
     #gallery-container{
         display: grid;
         column-count: 2;
         column-gap: 2rem;
         grid-template-columns: 1fr 1fr;
-
-        
     }
 
     #gallery-container figure{
         max-width: 100%;
         margin: 1rem 1.5rem;
         padding: 1.5rem 2rem;
-        
+
     }
+
     #gallery-container figure img{
         max-width: 100%;
     }
@@ -181,13 +152,10 @@ The last image in the gallery (tiger) should span two columns
         grid-column: span 2;
     }
     
-
     footer{
         padding: 2rem 2rem;
         text-align: center;
     }
-
-
 
 }
 
@@ -195,13 +163,9 @@ The last image in the gallery (tiger) should span two columns
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP
-For devices greater than 1000px wide
-The navigation should be a pink bar that takes up 100%
-*/
+DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP*/
 
 @media screen and (min-width:1001px){
-
 
     main{
         display: grid;
@@ -220,7 +184,9 @@ The navigation should be a pink bar that takes up 100%
         display:inline;
         justify-content: center;
     }
-
+    .header-container nav ul li a{
+        font-size: smaller;
+     }
 
     main h2{
         text-align: center;
@@ -229,7 +195,7 @@ The navigation should be a pink bar that takes up 100%
     #gallery-container{
         display: grid;
         column-count: 3;
-        column-gap: 2rem;
+        column-gap: 1.6rem;
         grid-template-columns: 1fr 1fr 1fr;
     }
     
@@ -242,15 +208,18 @@ The navigation should be a pink bar that takes up 100%
     #gallery-container figure img{
         max-width: 100%;
     }
-
+    #gallery-container figure figcaption{
+        font-size: smaller;
+    }
 
     #gallery-container figure:last-of-type { /*This was the HARDEST THING TO DO EVER.... TOOK ME FOREVER TO FIND THIS :C*/
         grid-column: span 2;
     }
 
     footer{
-        padding: 1rem 1rem;
+        padding: 2rem 2rem;
         text-align: center;
+        font-size: smaller;
     }
 }
 
